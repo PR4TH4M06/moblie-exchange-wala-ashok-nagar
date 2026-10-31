@@ -1,18 +1,18 @@
 /**
- * SS Mobile shop details (Ashok Nagar, Nashik).
- * Baad mein WhatsApp, Instagram, location yahi update kar dena.
+ * Mobile Exchange Wala shop details (Ashok Nagar, Nashik).
  */
 export const shop = {
-  name: "SS Mobile",
+  name: "Mobile Exchange Wala",
+  hindiName: "मोबाईल एक्सचेंज वाला",
   area: "Ashok Nagar",
   ownerTitle: "Avinash Dugdhe & Anil Kajalkar",
-  contactName: "AVINASH DUGDHE SS MOBILE",
-  tagline: "Mobiles · Smart TVs · Speakers · Home Theater · Service",
-  phoneDisplay: "+91 91722 25142",
-  phoneTel: "+919172225142",
-  whatsapp: "919762325555",
-  whatsappDisplay: "+91 97623 25555",
-  instagram: "https://www.instagram.com/ss_mobile_ashoknagar?srtk=MWMzdXQ2ZDZ6MGt4dg==",
+  contactName: "MOBILE EXCHANGE WALA ASHOK NAGAR",
+  tagline: "Buy ● Sell ● Exchange",
+  phoneDisplay: "+91 88887 14356",
+  phoneTel: "+918888714356",
+  whatsapp: "918888714356",
+  whatsappDisplay: "+91 88887 14356",
+  instagram: "https://www.instagram.com/exchangewala_ashoknagar7?mdxt=MW8za2djZzN4OGc4bQ==",
   ownerInstagram: "https://www.instagram.com/avinash_dugdhe?xtok=MTVtc2JsMDRmc2R6MQ==",
   ownerInstagramLabel: "Avinash Dugdhe",
   secondOwnerInstagram: "https://www.instagram.com/anil_kajalkar?dlrf=ZmY2b3p6dXowcGVw",
@@ -25,25 +25,30 @@ export const shop = {
   placeId: "ChIJQ3gek5Xt3TsRzGvb3ycr6-E",
   mapsEmbed: "",
   hours: "Open Daily · 10:00 AM – 10:00 PM",
-  brands: ["Samsung", "Apple iPhone", "Vivo", "Oppo", "Xiaomi / Redmi", "Realme", "OnePlus", "Smart TVs", "Home Theater", "JBL / boAt"],
+  brands: [
+    "Buy ● Sell ● Exchange",
+    "Unused Demo Upto 50% Discount",
+    "Sell Old Phone & Get Instant Cash",
+    "6 Months Brand Warranty",
+    "Instant Cash Available",
+    "Your Old Phones",
+  ],
   offers: [
-    "Latest 5G smartphones — all major brands (Samsung, Vivo, Oppo, Xiaomi, Realme, iPhone, OnePlus)",
-    "All-brand Smart LED TVs, 4K Android TVs & Google TVs",
-    "Bluetooth speakers, soundbars, party speakers & Home Theater systems",
-    "Genuine accessories, covers, tempered glass, neckbands, earbuds & fast chargers",
-    "Expert mobile repair, display replacement & battery service",
-    "Best exchange / buyback value on old phones + Easy 0% EMI options",
+    "Unused demo phones — up to 50% discount",
+    "Sell your old phone & get instant cash",
+    "6 months brand warranty",
+    "Buy & Sale — all top brand smartphones",
+    "Instant cash available for your old phones",
   ],
 };
 
 export const categories = [
   { id: "all", label: "All" },
-  { id: "mobiles", label: "New Mobiles" },
-  { id: "tv_audio", label: "Smart TV & Speakers" },
-  { id: "accessories", label: "Accessories" },
-  { id: "repair", label: "Repair & Service" },
-  { id: "exchange", label: "Exchange & EMI" },
-  { id: "staff", label: "Staff & Billing" },
+  { id: "buy_demo", label: "Unused Demo (50% Off)" },
+  { id: "sell_cash", label: "Sell & Instant Cash" },
+  { id: "exchange", label: "Exchange Phone" },
+  { id: "warranty", label: "6M Warranty" },
+  { id: "staff", label: "Staff & Service" },
 ] as const;
 
 export type CategoryId = (typeof categories)[number]["id"];
@@ -77,11 +82,10 @@ export function vcard() {
   return [
     "BEGIN:VCARD",
     "VERSION:3.0",
-    `N:DUGDHE SS MOBILE;AVINASH;;;`,
-    `FN:AVINASH DUGDHE SS MOBILE`,
+    `N:EXCHANGE WALA;MOBILE;;;`,
+    `FN:MOBILE EXCHANGE WALA ASHOK NAGAR`,
     `ORG:${shop.name} ${shop.area}`,
-    `TEL;TYPE=CELL,VOICE,PREF:+919762325555`,
-    `TEL;TYPE=WORK,VOICE:${shop.phoneTel}`,
+    `TEL;TYPE=CELL,VOICE,PREF:${shop.phoneTel}`,
     `ADR;TYPE=WORK:;;${shop.address};;;;India`,
     shop.instagram.endsWith("instagram.com/") ? "" : `URL:${shop.instagram}`,
     shop.ownerInstagram ? `URL:${shop.ownerInstagram}` : "",
